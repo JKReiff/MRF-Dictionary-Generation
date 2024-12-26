@@ -1,5 +1,6 @@
-# Dictionary_Generation
-**Accelerating Dictionary Generation with Machine Learning for Magnetic Resonance Fingerprinting (MRF)**
+# Accelerated Dictionary Generation with Machine Learning for Magnetic Resonance Fingerprinting
+
+ 
 
 Discover more information and view illustrations in the Documentation PowerPoint.
 
@@ -16,6 +17,11 @@ This module generates RR intervals for simulating patient heartbeats.
 **Output**:
 - `RR_Matrix_Full.txt`: A text file containing all RR intervals.
 
+![image](https://github.com/user-attachments/assets/ea686945-4e6f-4d23-86fa-51f07e4cafcb)
+
+![image](https://github.com/user-attachments/assets/35b46754-2e13-4c48-af0b-7d9a334f362a)
+
+
 ## 1_Data_Generator
 Generates training data by simulating a dictionary (EPG) for each RR interval.
 - **Important Inputs**:
@@ -24,6 +30,11 @@ Generates training data by simulating a dictionary (EPG) for each RR interval.
 - **Outputs**:
   - `T1_T2_Combinations.csv`: A file listing all T1 and T2 combinations used.
   - `RR_1.h5`, `RR_2.h5`, ..., `RR_n.h5`: Each dictionary for each RR interval is saved separately in an H5 file.
+
+
+
+![image](https://github.com/user-attachments/assets/7bdcfb21-099f-4955-b16b-255424d6c9d4)
+
 
 ## 2_Train_Model
 Trains a GRU model with an attention layer.
@@ -39,6 +50,9 @@ Trains a GRU model with an attention layer.
 
 **Note**: A smaller batch size, though resulting in better memory performance and potentially improving model accuracy, may reduce generalization capabilities. A batch size of 16 has also shown good results.
 
+![image](https://github.com/user-attachments/assets/94bc3894-3700-4c3e-b931-b2968707982b)
+
+
 ## 3_Dictionary_Generator
 Generates the dictionary by predicting it through the trained GRU model.
 - **Inputs**:
@@ -46,7 +60,8 @@ Generates the dictionary by predicting it through the trained GRU model.
   - **RR Intervals and Ranges**:
     - `RR_Intervals`: Specified list of RR intervals.
     - `t1_ranges` and `t2_ranges`: Specified ranges for T1 and T2 values.
+![image](https://github.com/user-attachments/assets/bafe159c-add6-450f-8e45-7953a1ba0e29)
 
 
 # MRF-Dictionary-Generation
-# MRF-Dictionary-Generation
+ 
