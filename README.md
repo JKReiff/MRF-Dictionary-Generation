@@ -1,4 +1,82 @@
-# Accelerated Dictionary Generation with Machine Learning for Magnetic Resonance Fingerprinting
+#Accelerated Dictionary Generation with Machine Learning for Magnetic Resonance Fingerprinting
+
+
+# MRF-Dictionary-Generation
+
+This project focuses on optimizing the database generation for Magnetic Resonance Fingerprinting (MRF), an innovative imaging technique in Magnetic Resonance Imaging (MRI). MRF enables the simultaneous and rapid acquisition of multiple tissue properties by comparing measured signals with a pre-computed database (also called a "dictionary").
+
+## Background
+
+Currently, creating this database involves time-consuming simulations. To make MRF clinically viable, this process needs to be significantly accelerated. This project is based on the paper "Machine Learning for Rapid Magnetic Resonance Fingerprinting Tissue Property Quantification" by Hamilton and Seiberlich (DOI: 10.1109/JPROC.2019.2936998), which proposes using neural networks for this purpose.
+
+## Project Goal
+
+The goal of this project was to train a neural network that learns the simulation of the MRF database, thereby significantly speeding up its creation.
+![image](https://github.com/user-attachments/assets/d2073aad-3b12-41f0-8b32-f944737f4d41)
+![image](https://github.com/user-attachments/assets/65a0c357-ae7b-4ab7-88e1-41ecf01166a9)
+
+## Methodology
+
+The workflow can be divided into the following steps:
+
+1.  **Training Data Generation:** 1000 variations of heart rate (RR intervals) were generated for different age groups, and for each of these variations, 1600 simulated T1 and T2 combinations were generated. The data was normalized, shuffled, and split into training, validation, and test sets.
+
+<img width="985" alt="1" src="https://github.com/user-attachments/assets/7b9b6507-2e2f-4866-8e5e-ff74244ba86c" />
+
+
+2.  **Neural Network Training:** A fully connected neural network (FCNN), extended for complex number processing, was trained. The model's performance was visualized using the mean absolute error (MAE).
+
+<img width="970" alt="2" src="https://github.com/user-attachments/assets/8e0a9955-0dfa-49c7-b9e4-7ca23bf372cd" />
+
+3.  **Integration and Testing with In Vivo Data:** The trained model was integrated into the imaging process and tested with in vivo and real patient data.
+
+![image](https://github.com/user-attachments/assets/e6e83538-4098-4b02-976f-f3e8a191ab10)
+
+
+## Results
+
+The developed model successfully reproduced the simulation data and showed very small deviations, especially in the myocardium (heart wall) region. Compared to the results in the Hamilton and Seiberlich paper, significantly higher precision and accuracy were achieved. The maximum deviation from the simulation was only 1.75 ms.
+
+Using the neural network enabled a significant acceleration of database creation:
+
+*   **Total time with denormalization:** 6.01 seconds (of which dictionary generation: 2.60 seconds)
+*   **Simulation time with EPG:** 240.26 seconds
+
+This corresponds to a reduction of approximately **97.5%** in computation time.
+
+## Conclusion
+
+This project demonstrates the great potential of neural networks for accelerating MRF database creation and paves the way for improved clinical applicability of the MRF technique.
+
+## Technologies Used
+
+*   [List technologies here, e.g., Python, TensorFlow/PyTorch, etc.]
+
+## References
+
+*   Hamilton and Seiberlich. Machine Learning for Rapid Magnetic Resonance Fingerprinting Tissue Property Quantification. DOI: 10.1109/JPROC.2019.2936998
+
+## Contact
+
+[Your Contact Information]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  
 
