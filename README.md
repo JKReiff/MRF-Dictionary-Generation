@@ -60,8 +60,8 @@ Generates the dictionary by predicting it through the trained GRU model.
   - **RR Intervals and Ranges**:
     - `RR_Intervals`: Specified list of RR intervals.
     - `t1_ranges` and `t2_ranges`: Specified ranges for T1 and T2 values.
-![image](https://github.com/user-attachments/assets/bafe159c-add6-450f-8e45-7953a1ba0e29)
-
+   
+d
 
 # MRF-Dictionary-Generation
  
