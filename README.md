@@ -1,13 +1,11 @@
 # Accelerated Dictionary Generation with Machine Learning for Magnetic Resonance Fingerprinting
 
 
-# MRF-Dictionary-Generation
 
-
-Abstract:
+## Abstract
 This project explores the use of machine learning to accelerate the creation of dictionaries for Magnetic Resonance Fingerprinting (MRF). MRF allows for rapid acquisition of tissue properties in MRI. Traditionally, these dictionaries are created through time-consuming simulations. This project demonstrates how a neural network can significantly reduce this processing time.
 
-Introduction
+## Introduction
 Magnetic Resonance Fingerprinting (MRF) is a powerful imaging technique used in MRI to obtain multiple tissue properties simultaneously. It achieves this by comparing measured signals with a pre-computed database known as a "dictionary." However, generating these dictionaries through simulations can be a bottleneck, hindering the clinical adoption of MRF.
 
 This project addresses this challenge by leveraging machine learning. It proposes utilizing a neural network to learn the simulation process, leading to significantly faster dictionary 
@@ -39,12 +37,16 @@ The workflow can be divided into the following steps:
 
 3.  **Integration and Testing with In Vivo Data:** After training, the model was integrated into the image processing pipeline. Its performance was evaluated using real patient data, confirming its effectiveness in real-world scenarios.
 
-![image](https://github.com/user-attachments/assets/e6e83538-4098-4b02-976f-f3e8a191ab10)
-
 
 ## Results
 
+
 The developed model successfully reproduced the simulation data and showed very small deviations, especially in the myocardium (heart wall) region. Compared to the results in the Hamilton and Seiberlich paper, significantly higher precision and accuracy were achieved. The maximum deviation from the simulation was only 1.75 ms.
+
+![image](https://github.com/user-attachments/assets/e6e83538-4098-4b02-976f-f3e8a191ab10)
+
+
+
 
 Using the neural network enabled a significant acceleration of database creation:
 
