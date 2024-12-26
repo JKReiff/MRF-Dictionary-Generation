@@ -49,3 +49,4 @@ Generates the dictionary by predicting it through the trained GRU model.
 
 
 # MRF-Dictionary-Generation
+# MRF-Dictionary-Generation
